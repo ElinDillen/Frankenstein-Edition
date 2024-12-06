@@ -32,4 +32,7 @@ p {
     display: none !important;
 }
 
-
+[place="supralinear"] {
+    vertical-align: super;
+    font-size: smaller;
+  }
