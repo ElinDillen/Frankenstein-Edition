@@ -32,7 +32,13 @@ p {
     display: none !important;
 }
 
-[place="supralinear"] {
+.supraAdd {
     vertical-align: super;
     font-size: smaller;
+  }
+
+  .lineBreak {
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }

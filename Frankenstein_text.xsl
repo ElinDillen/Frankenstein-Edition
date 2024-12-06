@@ -72,6 +72,10 @@
     
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
-
+    <xsl:template match="tei:lb]">
+        <span class="lineBreak">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
 </xsl:stylesheet>
