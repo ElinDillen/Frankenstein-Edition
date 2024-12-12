@@ -8,28 +8,31 @@
     <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
     <xsl:template match="tei:teiHeader"/>
 
+<!-- span class=-->
     <xsl:template match="tei:body">
         <div class="row">
         <div class="col-3"><br/><br/><br/><br/><br/>
+        <span class="marginText">
             <xsl:for-each select="//tei:add[@place = 'marginleft']">
                 <xsl:choose>
                     <xsl:when test="parent::tei:del">
                         <del>
                             <xsl:attribute name="class">
-                                <xsl:value-of select="attribute::hand" />
+                                <xsl:value-of select="attribute::hand"/>
                             </xsl:attribute>
                             <xsl:value-of select="."/></del><br/>
                     </xsl:when>
                     <xsl:otherwise>
                         <span >
                             <xsl:attribute name="class">
-                                <xsl:value-of select="attribute::hand" />
+                                <xsl:value-of select="attribute::hand"/>
                             </xsl:attribute>
-                        <xsl:value-of select="."/><br/>
+                        <xsl:apply-templates/><br/>
                         </span>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:for-each> 
+        </span>
         </div>
         <div class="col-9">
             <div class="transcription">
@@ -44,6 +47,10 @@
     </xsl:template>
     
     <xsl:template match="tei:p">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
+
+    <xsl:template match="tei:head">
         <p><xsl:apply-templates/></p>
     </xsl:template>
 
@@ -74,6 +81,42 @@
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
     <xsl:template match="tei:lb">
         <span class="lineBreak">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='sup']">
+        <span class="supraAdd">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:hi[@rend='u']">
+        <span class="underline">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='circled']">
+        <span class="circled">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:metamark[@function='pagenumber']">
+        <span class="pagenumber">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:metamark[@function='pagetitle']">
+        <span class="pagetitle">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='subline']">
+        <span class="subline">
             <xsl:apply-templates/>
         </span>
     </xsl:template>

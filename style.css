@@ -12,6 +12,11 @@ img {
 
 p {
     text-indent: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+head {
+  font-family: "Lucida Handwriting", "Courier New", monospace;
 }
 
 .row {
@@ -34,12 +39,43 @@ p {
 
 .supraAdd {
     vertical-align: super;
-    font-size: smaller;
+    font-size: small;
+    color: grey;
   }
 
   .lineBreak {
     display:block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
-  
+
+.underline {
+    text-decoration: underline;
+}
+
+.circled {
+    border: 2px solid black; 
+    border-radius: 50%;   
+    font-size: 1em;
+}
+
+.pagenumber {
+  display: block;
+  float: right;
+}
+
+.pagetitle {
+  display: block;
+  margin-left: 50px;
+}
+
+.subline {
+  font-size: small;
+  margin-inline-start: 40px;
+}
+
+.marginText {
+  font-style: italic;
+  color:cadetblue;
+  font-size: smaller;
+}
