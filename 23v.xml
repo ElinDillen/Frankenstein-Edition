@@ -34,8 +34,8 @@
         <pb facs="#p23v"/>
         <metamark function="pagenumber"><num><hi rend="circled">80</hi></num></metamark>
         <p>
-        <l>the doors being opened <unclear reason="ink blot">I</unclear> perceived Henry</l> 
-        <l>Clerval, who on <del type="crossedOut"/><unclear/>seeing me instantly sprung out.</l>
+        <lb>the doors being opened <unclear reason="ink blot">I</unclear> perceived Henry</lb> 
+        <lb>Clerval, who on <del type="crossedOut"/><unclear/>seeing me instantly sprung out.</lb>
       </p>
       <p>
         <l rend="indent"> "My dear Frankenstein," exclaimed he.</l>
@@ -46,7 +46,7 @@
       </p>
       <p>
         <l rend="indent">Nothing could equal my delight</l>
-        <l>on <del rend="crossedOut">see</del><choice><sic>seing</sic><corr>seeing</corr></choice> Clerval: his presence</l>
+        <lb>on <del rend="crossedOut">see</del><choice><sic>seing</sic><corr>seeing</corr></choice> Clerval: his presence</lb>
         <l>brought back to my thoughts my fa-</l>
         <l>ther, Elizabeth and all those scenes</l>
         <l>of home so dear to my recollection.</l>

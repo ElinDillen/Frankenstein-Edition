@@ -1,6 +1,29 @@
 body {
-
+  background-color: #e6d6c2;
 }
+
+.navbar {
+  background-color: #dfcab0 !important; 
+}
+
+#sel-hand {
+  background-color: #faf4e4;
+  color: black;
+}
+
+#toggleDeletionsButton {
+  background-color: #faf4e4;
+  border-width: 1px;
+}
+
+.no-indent {
+  text-indent: 0px;
+}
+
+#different-font {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -43,11 +66,11 @@ head {
     color: grey;
   }
 
-  .lineBreak {
+.lineBreak {
     display:block;
     margin-top: 5px;
     margin-bottom: 5px;
-  }
+}
 
 .underline {
     text-decoration: underline;
@@ -78,4 +101,15 @@ head {
   font-style: italic;
   color:cadetblue;
   font-size: smaller;
+}
+
+.indent {
+  text-indent: 10px ;
+  display: inline-block;
+}
+
+.authorsPic {
+  position: absolute;
+  right: 20px;
+  top: 80px;
 }

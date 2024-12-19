@@ -85,6 +85,18 @@
         </span>
     </xsl:template>
 
+    <xsl:template match="tei:l">
+        <span class="lineBreak">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:l[@rend='indent']">
+        <span class="indent">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
     <xsl:template match="tei:hi[@rend='sup']">
         <span class="supraAdd">
             <xsl:apply-templates/>
@@ -117,6 +129,24 @@
 
     <xsl:template match="tei:hi[@rend='subline']">
         <span class="subline">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="nav[@class='navbar navbar-expand-lg navbar-light bg-light']">
+        <span class="navbar">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="div[@class='form-group']">
+        <span class="navbar">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="button[@id='toggleDeletionsButton']">
+        <span class="buttonCol">
             <xsl:apply-templates/>
         </span>
     </xsl:template>

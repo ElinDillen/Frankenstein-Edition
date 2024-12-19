@@ -104,15 +104,44 @@ function documentLoader() {
   var MaryArray = Array.from(visible_mary);
   var PercyArray = Array.from(visible_percy);
     if (event.target.value == 'both') {
-    //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element.
-     
+   MaryArray.forEach(element => {
+      element.style.color = 'black'
+    });
+    PercyArray.forEach(element => {
+      element.style.color = 'black'
+    });
     } else if (event.target.value == 'Mary') {
-     //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
-     
+    MaryArray.forEach(element => {
+      element.style.color = 'red'
+    });
+    PercyArray.forEach(element => {
+      element.style.color = 'black'
+    }) 
     } else {
-     //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
-    
+    MaryArray.forEach(element => {
+      element.style.color = 'black'
+    })
+    PercyArray.forEach(element => {
+      element.style.color = 'red'
+    })  
     }
   }
 // write another function that will toggle the display of the deletions by clicking on a button
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
+document.getElementById('toggleDeletionsButton').addEventListener('click', toggleDeletions);
+function toggleDeletions() {
+  var deletions = document.getElementsByTagName('del'); // Get all <del> elements
+  var deletionsArray = Array.from(deletions);
+
+  deletionsArray.forEach(function(element) {
+    // Check if the element is currently displayed by checking computed style
+    var currentDisplay = window.getComputedStyle(element).display;
+
+    if (currentDisplay === "none") {
+      element.style.display = "inline"; // Show the element (using inline as it's a block-level element)
+    } else {
+      element.style.display = "none"; // Hide the element
+    }
+  });
+}
+
