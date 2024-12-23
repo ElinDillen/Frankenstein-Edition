@@ -71,11 +71,21 @@
     </xsl:template>
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
-    <xsl:template match="tei:add[@place = 'supralinear']">
+    <!-- <xsl:template match="tei:add[@place = 'supralinear']">
         <span class="supraAdd">
             <xsl:apply-templates/>
         </span>
-    </xsl:template>
+    </xsl:template> -->
+
+     <xsl:template match="tei:add[@place = 'supralinear']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>supraAdd </xsl:text>
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
