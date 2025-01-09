@@ -37,7 +37,7 @@
          to change and I thought that I held <lb/>
          the corpse of my dead mother in my arms 
           <del type="overwritten" hand="#MWS" rend="blackink">,</del>
-          <add place="infralinear" hand="#MWS" rend="blackink">:</add>
+          <add place="infralinear" hand="#PBS" rend="blackink">:</add>
         <lb/>
         
           <del type="overwritten" hand="#MWS" rend="blackink">a</del> 
@@ -48,8 +48,7 @@
         the flannel; I started 
           <add place="infralinear" hand="#MWS" rend="blackink"><metamark></metamark></add>
           <note>'^' is used as metamark, close visual resemblance</note>
-          <add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>
-          with horror, a
+          <add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>with horror, a
         <lb/>
         <del type="crossedOut" hand="#MWS" rend="blackink">when I saw</del>
           cold dew covered my forehead
@@ -75,7 +74,7 @@
           </add>
           he hel
           <del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del>
-          <add place="inline" hand="#MWS" rend="blackink">d</add>
+          <add place="intralinear" hand="#MWS" rend="blackink">d</add>
         <lb/>
         up the curtain, 
           <add place="infralinear" hand="#MWS" rend="blackink"><metamark>-</metamark>
@@ -97,12 +96,12 @@
         ing attentively, catching and fearing each<lb/>
         sound as if it were to announce the<lb/>
         arrival of the demoniacal corpse to<lb/>
-        which I had so miserabl<del type="overwritten" hand="#PBS" rend="blackink">e</del><add place="inline" hand="#PBS" rend="blackink">y</add> given life.<lb/>
+        which I had so miserabl<del type="overwritten" hand="#PBS" rend="blackink">e</del><add place="intralinear" hand="#PBS" rend="blackink">y</add> given life.<lb/>
         Oh! no mortal could support <lb/>
         the horror of that countenance.a<lb/>
         mummy
         <metamark>&#8257;</metamark>
-        <add place="margintop" hand="#MWS" rend="blackink">again</add>
+        <add place="supralinear" hand="#MWS" rend="blackink">again</add>
         endued with 
         <del type="crossedOut" hand="#MWS" rend="blackink">life</del>
         <add place="supralinear" hand="#MWS" rend="blackink">animation</add> 

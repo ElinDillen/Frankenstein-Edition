@@ -71,11 +71,6 @@
     </xsl:template>
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
-    <!-- <xsl:template match="tei:add[@place = 'supralinear']">
-        <span class="supraAdd">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template> -->
 
      <xsl:template match="tei:add[@place = 'supralinear']">
         <span>
@@ -157,6 +152,37 @@
 
     <xsl:template match="button[@id='toggleDeletionsButton']">
         <span class="buttonCol">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+
+    <xsl:template match="tei:add[@place = 'overwritten']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>overwritten </xsl:text>
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:add[@place = 'intralinear']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>intralinear </xsl:text>
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    
+     <xsl:template match="tei:add[@place = 'infralinear']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>infralinear </xsl:text>
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </span>
     </xsl:template>

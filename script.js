@@ -145,3 +145,59 @@ function toggleDeletions() {
   });
 }
 
+document.getElementById('nextPageButton').addEventListener('click', function() {
+  // Get the current page name (e.g., '21v')
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+
+  // Define the sequence of suffixes (v or r) and the base page numbers
+  const suffixes = ['v', 'r'];
+  
+  // Split the current page into its base number and suffix (e.g., '21' and 'v' for '21v')
+  const currentBase = currentPage.slice(0, -1); // e.g., '21' from '21v'
+  const currentSuffix = currentPage.slice(-1); // e.g., 'v' from '21v'
+  
+  // Find the next suffix in the sequence
+  let nextSuffix = '';
+  if (currentSuffix === 'v') {
+      nextSuffix = 'r';  // If it's 'v', the next one is 'r'
+  } else if (currentSuffix === 'r') {
+      nextSuffix = 'v';  // If it's 'r', the next one is 'v'
+  }
+
+  // Calculate the next page based on the current base and suffix
+  let nextPage = currentBase + nextSuffix;
+
+  // If we've reached the last suffix (e.g., '24v'), increment the base number
+  if (nextSuffix === 'r' && currentSuffix === 'v') {
+      nextPage = (parseInt(currentBase) + 1) + 'r'; // Increment base number and append 'v'
+  }
+
+  // Construct the next page's filename (e.g., '22r.html')
+  const nextPageUrl = nextPage + '.html';
+  
+  // Navigate to the next page
+  window.location.href = nextPageUrl;
+});
+
+document.getElementById('previousPageButton').addEventListener('click', function() {
+  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+  const suffixes = ['v', 'r'];
+  const currentBase = currentPage.slice(0, -1); 
+  const currentSuffix = currentPage.slice(-1);
+
+  let previousSuffix = '';
+  if (currentSuffix === 'v') {
+    previousSuffix = 'r';}
+  else if (currentSuffix === 'r'){
+    previousSuffix = 'v';}
+  
+  let previousPage = currentBase + previousSuffix;
+
+  if (previousSuffix === 'v' && currentSuffix === 'r') {
+      previousPage = (parseInt(currentBase) -  1) + 'v';
+  }
+
+  const previousPageUrl = previousPage + '.html';
+
+  window.location.href = previousPageUrl;
+});

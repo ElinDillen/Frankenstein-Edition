@@ -2,6 +2,10 @@ body {
   background-color: #e6d6c2;
 }
 
+h3 {
+  margin-top: 50px;
+}
+
 .navbar {
   background-color: #dfcab0 !important; 
 }
@@ -16,10 +20,33 @@ body {
   border-width: 1px;
 }
 
+#previousPageButton {
+  background-color: #faf4e4;
+  border-width: 1px;
+}
+
+#nextPageButton {
+  background-color: #faf4e4;
+  border-width: 1px;
+}
+
 .index {
   text-indent: 0px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Candara';
+  font-size: larger;
 }
+
+.footer {
+  text-indent: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  background-color: #dfcab0;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -49,33 +76,51 @@ head {
 }
 
 .marginAdd {
-    display: none;
+  display: none;
 }
 
 .mirador-canvas-nav {
-    display: none !important;
+  display: none !important;
 }
 
 .supraAdd {
-    vertical-align: super;
-    font-size: small;
-    color: grey;
+  vertical-align: super;
+  font-size: small;
+  color: grey;
   }
 
+.overwritten {
+  font-style: italic;
+}
+
+.intralinear {
+  font-weight: bold;
+}
+
+.infralinear {
+  vertical-align: sub;
+  font-size: small;
+  color: grey;
+}
+
 .lineBreak {
-    display:block;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  display:block;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+
 .circled {
-    border: 2px solid black; 
-    border-radius: 50%;   
-    font-size: 1em;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  border: 2px solid black;
+  text-align: center;
 }
 
 .pagenumber {
@@ -95,7 +140,6 @@ head {
 
 .marginText {
   font-style: italic;
-  color:cadetblue;
   font-size: smaller;
 }
 
@@ -116,6 +160,12 @@ head {
   top: 80px;
 }
 
+.authorsPic3 {
+  position: absolute;
+  right: 20px;
+  top: 400px;
+}
+
 .caption {
   margin-top: 10px;
   text-align: center;
@@ -132,6 +182,11 @@ head {
   right: 320px;
 }
 
+.authorsPic3 + .caption {
+  top: 700px;
+  right: 120px;
+}
+
 #column {
   display: block;
   width: 50%;
@@ -143,3 +198,12 @@ a {
   font-weight: bold;
 }
 
+del {
+  text-decoration-color: grey;
+  text-decoration-thickness: 2px;
+  white-space: nowrap;
+}
+
+add {
+  font-style: italic;
+}
