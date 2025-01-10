@@ -20,6 +20,11 @@ h3 {
   border-width: 1px;
 }
 
+#toggleNotesButton {
+  background-color: #faf4e4;
+  border-width: 1px;
+}
+
 #previousPageButton {
   background-color: #faf4e4;
   border-width: 1px;
@@ -133,11 +138,6 @@ head {
   margin-left: 50px;
 }
 
-.subline {
-  font-size: small;
-  margin-inline-start: 40px;
-}
-
 .marginText {
   font-style: italic;
   font-size: smaller;
@@ -201,9 +201,46 @@ a {
 del {
   text-decoration-color: grey;
   text-decoration-thickness: 2px;
-  white-space: nowrap;
 }
 
 add {
   font-style: italic;
+}
+
+.editorial {
+  color: #57A0D3;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.right {
+  display: inline-block;
+  text-align: right;
+  margin-left: 200px; 
+}
+
+.no_bull {
+  list-style-type: none;
+}
+
+sic {
+  font-style: italic;;
+}
+
+corr {
+  margin-left: 0.5em;
+  color: #666;
+  font-size: small;
+}
+
+corr::before {
+  content: "[corr: ";
+  color: #666;
+  font-size: small;
+}
+
+corr::after {
+  content: "]";
+  color: #666;
+  font-size: small;
 }

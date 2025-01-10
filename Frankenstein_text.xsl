@@ -4,6 +4,13 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs tei"
     version="2.0">
+
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
     
     <!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
     <xsl:template match="tei:teiHeader"/>
@@ -132,12 +139,6 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="tei:hi[@rend='subline']">
-        <span class="subline">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
     <xsl:template match="nav[@class='navbar navbar-expand-lg navbar-light bg-light']">
         <span class="navbar">
             <xsl:apply-templates/>
@@ -186,5 +187,55 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+
+    <xsl:template match="tei:note[@type='editorial']">
+        <span class="editorial">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
+    <xsl:template match="tei:list">
+        <ul class="no_bull">
+            <xsl:apply-templates select="tei:item" />
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="tei:item">
+        <li>
+            <xsl:choose>
+                <xsl:when test="@rend='right'">
+                    <span class="right">
+                        <xsl:apply-templates/>
+                    </span>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates>
+                </xsl:otherwise>
+            </xsl:choose>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="tei:choice">
+     <xsl:message>Matched <tei:choice> element</xsl:message>
+        <span class="choice">
+            <span class="sic">
+                <xsl:value-of select="tei:sic"/>
+            </span>
+            <span class="corr">
+                (corrected to <xsl:value-of select="tei:corr"/>)
+            </span>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:choice">
+        <span class="choice">
+            <span class="sic">
+                <xsl:apply-templates select="tei:sic"/>
+            </span>
+            <span class="corr">
+                <xsl:apply-templates select="tei:corr"/>
+            </span>
+        </span>
+    </xsl:template>
+        
 </xsl:stylesheet>
