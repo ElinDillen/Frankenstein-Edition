@@ -35,51 +35,21 @@
         <metamark function="pagenumber"><num><hi rend="circled">77</hi></num></metamark>
       <p>
          to change and I thought that I held <lb/>
-         the corpse of my dead mother in my arms 
-          <del type="overwritten" hand="#MWS" rend="blackink">,</del>
-          <add place="intralinear" hand="#PBS" rend="blackink">:</add>
-        <lb/>
-        
-          <del type="overwritten" hand="#MWS" rend="blackink">a</del> 
-          <add place="intralinear" hand="#MWS" rend="blackink">A</add>
-          shroud envolepped her form &amp; I saw 
-        <lb/>
+         the corpse of my dead mother in my arms <del type="overwritten" hand="#MWS" rend="blackink">,</del><add place="intralinear" hand="#PBS" rend="blackink">:</add><lb/>
+        <del type="overwritten" hand="#MWS" rend="blackink">a</del><add place="intralinear" hand="#MWS" rend="blackink">A</add>shroud envolepped her form &amp; I saw <lb/>
         the grave worms crawling in the folds of<lb/>
-        the flannel; I started 
-          <add place="infralinear" hand="#MWS" rend="blackink"><metamark>^</metamark></add>
-          <add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>with horror, a
-        <lb/>
+        the flannel; I started <add place="infralinear" hand="#MWS" rend="blackink"><metamark>^</metamark></add><add place="supralinear" hand="#MWS" rend="blackink">from my sleep</add>with horror, a<lb/>
           <note type="editorial">'^' is used as metamark, close visual resemblance</note><lb/>
-        <del type="crossedOut" hand="#MWS" rend="blackink">when I saw</del>
-          cold dew covered my forehead
-        <lb/>
-        my teeth 
-          <del type="crossedOut" hand="#MWS" rend="blackink">ah</del>
-          chattered and every limb
-        <lb/>
-        
-          <del type="crossedOut" hand="#MWS" rend="blackink">was</del>
-          <add place="supralinear" hand="#PBS" rend="blackink">became</add>
-          convul
-          <del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del>
-          <add place="intralinear" hand="#MWS" rend="blackink">s</add>
-          ed, when, by the dim and
-        <lb/>
+        <del type="crossedOut" hand="#MWS" rend="blackink">when I saw</del>cold dew covered my forehead<lb/>
+        my teeth <del type="crossedOut" hand="#MWS" rend="blackink">ah</del>chattered and every limb<lb/>
+        <del type="crossedOut" hand="#MWS" rend="blackink">was</del><add place="supralinear" hand="#PBS" rend="blackink">became</add>convul<del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del><add place="intralinear" hand="#MWS" rend="blackink">s</add>ed, when, by the dim and<lb/>
         yellow light of the moon as it forced<lb/>
         its way through the window shutters, I<lb/>
         beheld the wretch — the miserable<lb/>
-        monster whom I had created;
-          <add place="infralinear" hand="#PBS" rend="blackink"><metamark>-</metamark>
-          </add> he hel
-          <del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del>
-          <add place="intralinear" hand="#MWS" rend="blackink">d</add>
-        <lb/>
-        <note type="editorial">'-'is used as metamark, a thick line is used</note><lb/>
-        up the curtain, 
-          <add place="infralinear" hand="#MWS" rend="blackink"><metamark>-</metamark></add>
-          and his eyes; if eyes
-        <lb/>
-        <note type="editorial">'-'is used as metamark, a thick line is used</note><lb/>
+        monster whom I had created;<add place="infralinear" hand="#PBS" rend="blackink"><metamark>-</metamark></add> he hel<del type="overwritten" hand="#MWS" rend="blackink"><!-- unclear char --></del><add place="intralinear" hand="#MWS" rend="blackink">d</add><lb/>
+          <note type="editorial">'-'is used as metamark, a thick line is used</note><lb/>
+        up the curtain, <add place="infralinear" hand="#MWS" rend="blackink"><metamark>-</metamark></add>and his eyes; if eyes<lb/>
+          <note type="editorial">'-'is used as metamark, a thick line is used</note><lb/>
         they may be called, were fixed on me – His<lb/>
         <add place="marginleft" hand="#PBS" rend="blackink">inarticulate</add>jaws opened and he muttered <add place="supralinear" hand="#PBS" rend="blackink">in</add> some <del type="crossedOut" hand="#MWS" rend="blackink">words</del><lb/>
         <add place="marginleft" hand="#PBS" rend="blackink">sounds</add>while a grin wrinkled his cheeks. He<lb/>
@@ -97,14 +67,9 @@
         which I had so miserabl<del type="overwritten" hand="#PBS" rend="blackink">e</del><add place="intralinear" hand="#PBS" rend="blackink">y</add> given life.<lb/></p>
         <p>Oh! no mortal could support <lb/>
         the horror of that countenance. A<lb/>
-        mummy
-        <metamark>&#8257;</metamark>
-        <add place="supralinear" hand="#MWS" rend="blackink">again</add>
-        endued with 
-        <del type="crossedOut" hand="#MWS" rend="blackink">life</del>
-        <add place="supralinear" hand="#PBS" rend="blackink">animation</add> 
-          could not be<lb/>
-      </p></div>
+        mummy<metamark>&#8257;</metamark><add place="supralinear" hand="#MWS" rend="blackink">again</add>endued with <del type="crossedOut" hand="#MWS" rend="blackink">life</del><add place="supralinear" hand="#PBS" rend="blackink">animation</add> could not be<lb/>
+      </p>
+      </div>
     </body>
   </text>
 </TEI>

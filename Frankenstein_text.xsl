@@ -157,12 +157,6 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="button[@id='toggleDeletionsButton']">
-        <span class="buttonCol">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-
 
     <xsl:template match="tei:add[@place = 'overwritten']">
         <span>

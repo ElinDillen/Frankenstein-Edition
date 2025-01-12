@@ -103,8 +103,16 @@ head {
   vertical-align: baseline;
 }
 
+del {
+  text-decoration-color: grey;
+  text-decoration-thickness: 2px;
+}
+
 .overwritten {
   font-style: italic;
+  text-decoration: line-through;
+  text-decoration-color: grey;
+  text-decoration-thickness: 2px;
 }
 
 .intralinear {
@@ -200,11 +208,6 @@ head {
 a {
   color: black;
   font-weight: bold;
-}
-
-del {
-  text-decoration-color: grey;
-  text-decoration-thickness: 2px;
 }
 
 add {

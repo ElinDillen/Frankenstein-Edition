@@ -40,8 +40,7 @@
                "stant answer to my applications<lb/>
                "was the same as <add place="infralinear" hand="#PBS" rend="blackink">^</add><add place="supralinear" hand="#PBS" rend="blackink">that of</add>the dutch school<lb/>
                "master in the Vicar of Wakefield-<lb/>
-               <add place="marginleft" hand="#MWS" rend="blackink">
-                  "<del type="crossedOut" hand="#MWS" rend="blackink">a year</del> with<lb/>
+               <add place="marginleft" hand="#MWS" rend="blackink">"<del type="crossedOut" hand="#MWS" rend="blackink">a year</del> with<lb/>
                   "out greek -I<lb/>
                   "eat heartily<lb/>
                   withoug greek<lb/>
@@ -74,7 +73,7 @@
                "You have guessed right" I replied<lb/>
                "I have lately been so engaged in<lb/>
                "<del type="crossedOut" hand="#PBS" rend="blackink">several</del><add place="supralinear" hand="#PBS" rend="blackink"><del type="crossedOut" hand="#PBS" rend="blackink">studious</del> one</add>occupation<del type="crossedOut" hand="#PBS" rend="blackink">s</del> that I <del type="crossedOut" hand="#PBS" rend="blackink">did</del><lb/>
-               <add place="marginleft" hand="#PBS" rend="blackink">have</add>"not allow<add place="overwritten" hand="#PBS" rend="blackink">ed </add><add place="infralinear" hand="#MWS" rend="blackink">^</add><add place="supralinear" hand="#MWS" rend="blackink">myself</add>sufficient rest as you<lb/>
+               <add place="marginleft" hand="#PBS" rend="blackink">have</add>"not allow<add place="intralinear" hand="#PBS" rend="blackink">ed </add><add place="infralinear" hand="#MWS" rend="blackink">^</add><add place="supralinear" hand="#MWS" rend="blackink">myself</add>sufficient rest as you<lb/>
             </p>
          </div>
       </body>

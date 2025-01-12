@@ -34,7 +34,8 @@
             <pb facs="#p21v"/>
             <metamark function="pagenumber"><num><hi rend="circled">76</hi></num></metamark>
             <p>his shrivelled complexion and strait<lb/>
-                black lips.<lb/></p> 
+                black lips.<lb/>
+            </p> 
             <p>The different accidents of life are<lb/>
                 not so changeable at the feelings of hu<lb/>
                 man nature. I had worked hard for<lb/>
@@ -55,13 +56,15 @@
                 endured, and I threw myself on my<lb/>
                 bed in my clothes endeavouring to seek<lb/>
                 a <del type="crossedOut" hand="#MWS" rend="blackink">feew</del> few moments of forgetfullness.<lb/> 
-               But it was in vain; I slept indeed but<lb/>
+                But it was in vain; I slept indeed but<lb/>
                 I was disturbed by the wildest dreams-<lb/>
                 I saw Elizabeth <add place="supralinear" hand="#MWS" rend="blackink">in the bloom of health</add> walking in the streets of<lb/>
                 Ingolstadt; delighted &amp; surprised I embraced<lb/>
                 her but as I imprinted the first kiss<lb/>
                 on her lips they became lurid with<lb/>
-                the hue of death; her features appeared<lb/></p></div>
+                the hue of death; her features appeared<lb/>
+            </p>
+            </div>
         </body>
     </text>
 </TEI>
