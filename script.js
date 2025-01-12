@@ -128,7 +128,7 @@ function documentLoader() {
   }
 // write another function that will toggle the display of the deletions by clicking on a button
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
-document.getElementById('toggleDeletionsButton').addEventListener('click', toggleDeletions);
+document.getElementById('toggleDeletionsSwitch').addEventListener('change', toggleDeletions);
 function toggleDeletions() {
   var deletions = document.getElementsByTagName('del'); // Get all <del> elements
   var deletionsArray = Array.from(deletions);
@@ -145,57 +145,152 @@ function toggleDeletions() {
   });
 }
 
-document.getElementById('nextPageButton').addEventListener('click', function() {
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
-  const suffixes = ['v', 'r'];
-  const currentBase = currentPage.slice(0, -1); // e.g., '21' from '21v'
-  const currentSuffix = currentPage.slice(-1); // e.g., 'v' from '21v'
+document.addEventListener('DOMContentLoaded', () => {
+  const nextPageButton = document.getElementById('nextPageButton');
 
-  let nextSuffix = '';
-  if (currentSuffix === 'v') {
-      nextSuffix = 'r';
-  } else if (currentSuffix === 'r') {
-      nextSuffix = 'v';
+  if (nextPageButton) {
+    nextPageButton.addEventListener('click', function () {
+      const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+      const suffixes = ['v', 'r'];
+      const currentBase = currentPage.slice(0, -1);
+      const currentSuffix = currentPage.slice(-1);
+
+      let nextSuffix = '';
+      if (currentSuffix === 'v') {
+        nextSuffix = 'r';
+      } else if (currentSuffix === 'r') {
+        nextSuffix = 'v';
+      }
+
+      let nextPage = currentBase + nextSuffix;
+
+      if (nextSuffix === 'r' && currentSuffix === 'v') {
+        nextPage = (parseInt(currentBase) + 1) + 'r';
+      }
+
+      const nextPageUrl = nextPage + '.html';
+      window.location.href = nextPageUrl;
+    });
+  } else {
+    console.warn('Next Page button not found on this page.');
   }
-
-  let nextPage = currentBase + nextSuffix;
-
-  if (nextSuffix === 'r' && currentSuffix === 'v') {
-      nextPage = (parseInt(currentBase) + 1) + 'r'; 
-  }
-
-  const nextPageUrl = nextPage + '.html';
-  window.location.href = nextPageUrl;
-});
-
-document.getElementById('previousPageButton').addEventListener('click', function() {
-  const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
-  const suffixes = ['v', 'r'];
-  const currentBase = currentPage.slice(0, -1); 
-  const currentSuffix = currentPage.slice(-1);
-
-  let previousSuffix = '';
-  if (currentSuffix === 'v') {
-    previousSuffix = 'r';}
-  else if (currentSuffix === 'r'){
-    previousSuffix = 'v';}
-  
-  let previousPage = currentBase + previousSuffix;
-
-  if (previousSuffix === 'v' && currentSuffix === 'r') {
-      previousPage = (parseInt(currentBase) -  1) + 'v';
-  }
-
-  const previousPageUrl = previousPage + '.html';
-
-  window.location.href = previousPageUrl;
 });
 
 
-document.getElementById('toggleNotesButton').addEventListener('click', toggleNotes);
+document.addEventListener('DOMContentLoaded', () => {
+  const previousPageButton = document.getElementById('previousPageButton');
+
+  if (previousPageButton) {
+    previousPageButton.addEventListener('click', function () {
+      const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+      const suffixes = ['v', 'r'];
+      const currentBase = currentPage.slice(0, -1); 
+      const currentSuffix = currentPage.slice(-1);
+
+      let previousSuffix = '';
+      if (currentSuffix === 'v') {
+        previousSuffix = 'r';
+      } else if (currentSuffix === 'r') {
+        previousSuffix = 'v';
+      }
+
+      let previousPage = currentBase + previousSuffix;
+
+      if (previousSuffix === 'v' && currentSuffix === 'r') {
+        previousPage = (parseInt(currentBase) - 1) + 'v';
+      }
+
+      const previousPageUrl = previousPage + '.html';
+      window.location.href = previousPageUrl;
+    });
+  } else {
+    console.warn('Previous Page button not found on this page.');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const lastPageButton = document.getElementById('lastPageButton');
+
+  if (lastPageButton) {
+    lastPageButton.addEventListener('click', function () {
+      window.location.href = "25v.html"
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const firstPageButtonPageButton = document.getElementById('firstPageButton');
+
+  if (firstPageButton) {
+    firstPageButton.addEventListener('click', function () {
+      window.location.href = "21r.html"
+    });
+  }
+});
+
+document.getElementById('toggleNotesSwitch').addEventListener('change', toggleNotes);
 
 function toggleNotes() {
-  var notes = document.querySelectorAll('.editorial'); 
+  var notes = document.querySelectorAll('.editorial');
+  
+  if (notes.length === 0) {
+    alert("No notes on this page.");
+    return;
+  }
+  notes.forEach(function(element) {
+    if (element.style.display === "none" || window.getComputedStyle(element).display === "none") {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none"; 
+    }
+  });
+}
+
+
+document.getElementById('toggleReadMode').addEventListener('change', toggleReadMode);
+function toggleReadMode() {
+  var deletions = document.getElementsByTagName('del'); // Get all <del> elements
+  var deletionsArray = Array.from(deletions);
+
+  deletionsArray.forEach(function(element) {
+    // Check if the element is currently displayed by checking computed style
+    var currentDisplay = window.getComputedStyle(element).display;
+
+    if (currentDisplay === "none") {
+      element.style.display = "inline"; // Show the element (using inline as it's a block-level element)
+    } else {
+      element.style.display = "none"; // Hide the element
+    }
+  });
+
+  var additions1 = document.querySelectorAll("span.supraAdd.\\#PBS, span.supraAdd.\\#MWS, span.\\#PBS.inline, span.\\#MWS.inline");
+  var additions1Array = Array.from(additions1);
+
+  additions1Array.forEach(function(element) { 
+    if (element.classList.contains("supraAdd")) { 
+      element.classList.remove("supraAdd"); 
+      element.classList.add("inline"); 
+    } else { 
+      element.classList.remove("inline"); 
+      element.classList.add("supraAdd"); 
+    }
+  });
+
+  var additions2 = document.querySelectorAll("span.infralinear.\\#PBS, span.infralinear.\\#MWS");
+  var additions2Array = Array.from(additions2);
+
+  additions2Array.forEach(function(element) { 
+    var currentDisplay = window.getComputedStyle(element).display;
+
+    if (currentDisplay === "none") {
+      element.style.display = "inline";
+    } else {
+      element.style.display = "none";
+    }
+  });
+
+  var notes = document.querySelectorAll('.editorial');
+  
   notes.forEach(function(element) {
     if (element.style.display === "none" || window.getComputedStyle(element).display === "none") {
       element.style.display = "block";

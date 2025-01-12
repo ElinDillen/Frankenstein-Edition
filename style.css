@@ -15,24 +15,10 @@ h3 {
   color: black;
 }
 
-#toggleDeletionsButton {
+button {
   background-color: #faf4e4;
   border-width: 1px;
-}
-
-#toggleNotesButton {
-  background-color: #faf4e4;
-  border-width: 1px;
-}
-
-#previousPageButton {
-  background-color: #faf4e4;
-  border-width: 1px;
-}
-
-#nextPageButton {
-  background-color: #faf4e4;
-  border-width: 1px;
+  float: right;
 }
 
 .index {
@@ -62,12 +48,29 @@ img {
 }
 
 p {
-    text-indent: 10px;
-    font-family: "Lucida Console", "Courier New", monospace;
+    text-indent: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p:first-of-type {
+  text-indent: 0px;
+}
+
+.meta {
+  text-indent: 0px;
+}
+
+.license {
+  text-indent: 0px;
+  font-size: small;
+}
+
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 head {
-  font-family: "Lucida Handwriting", "Courier New", monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .row {
@@ -82,6 +85,7 @@ head {
 
 .marginAdd {
   display: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .mirador-canvas-nav {
@@ -92,13 +96,19 @@ head {
   vertical-align: super;
   font-size: small;
   color: grey;
+  display: inline;
   }
+
+.inline {
+  vertical-align: baseline;
+}
 
 .overwritten {
   font-style: italic;
 }
 
 .intralinear {
+  display: inline;
   font-weight: bold;
 }
 
@@ -117,7 +127,6 @@ head {
 .underline {
   text-decoration: underline;
 }
-
 
 .circled {
   border-radius: 50%;
@@ -141,11 +150,6 @@ head {
 .marginText {
   font-style: italic;
   font-size: smaller;
-}
-
-.indent {
-  text-indent: 10px ;
-  display: inline-block;
 }
 
 .authorsPic1 {
@@ -243,4 +247,52 @@ corr::after {
   content: "]";
   color: #666;
   font-size: small;
+}
+
+sources {
+  font-size: small;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(70, 70, 255);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
 }

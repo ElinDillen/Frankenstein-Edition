@@ -12,10 +12,11 @@
                      <div class="row">
                          <div class="col">
                              <h4>About the manuscript page:</h4>
-                             <xsl:value-of select="//tei:sourceDesc"/>
-                             <xsl:value-of select="//tei:licence"/> <!-- You can change the way the metadata is visualised as well-->
+                             <p class="meta"><xsl:value-of select="//tei:sourceDesc"/></p>
+                             <p class="license"><xsl:value-of select="//tei:licence"/></p> <!-- You can change the way the metadata is visualised as well-->
                          </div>
                          <div class="col">
+                         <p class="meta">
                             <ul> 
                                 <li>Total number of modifications: 
                                     <xsl:value-of select="count(//tei:del|//tei:add)" /> <!-- Counts all the add and del elements, and puts it in a list item -->
@@ -32,8 +33,8 @@
                                 <li>Modifications by Mary:
                                     <xsl:value-of select="count(//tei:del[@hand = '#MWS']|//tei:add[@hand = '#MWS'])"/>
                                 </li>
-                                <!-- add other list items in which you count things, such as the modifications made by Percy -->
                             </ul>
+                        </p>
                         </div>
                      </div>
         <hr/>

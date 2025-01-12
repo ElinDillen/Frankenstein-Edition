@@ -37,7 +37,7 @@
          to change and I thought that I held <lb/>
          the corpse of my dead mother in my arms 
           <del type="overwritten" hand="#MWS" rend="blackink">,</del>
-          <add place="infralinear" hand="#PBS" rend="blackink">:</add>
+          <add place="intralinear" hand="#PBS" rend="blackink">:</add>
         <lb/>
         
           <del type="overwritten" hand="#MWS" rend="blackink">a</del> 
@@ -95,7 +95,7 @@
         sound as if it were to announce the<lb/>
         arrival of the demoniacal corpse to<lb/>
         which I had so miserabl<del type="overwritten" hand="#PBS" rend="blackink">e</del><add place="intralinear" hand="#PBS" rend="blackink">y</add> given life.<lb/></p>
-        <p style="text-indent:20px">Oh! no mortal could support <lb/>
+        <p>Oh! no mortal could support <lb/>
         the horror of that countenance. A<lb/>
         mummy
         <metamark>&#8257;</metamark>

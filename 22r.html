@@ -48,10 +48,25 @@
       <span style="visibility:hidden" id='page'>46</span>
       <h2 id='folio'>22r</h2> <!-- you can style this h2 element differently, but you should keep the id="folio" and the elements value *unchanged* -->
       <div id="stats"></div>
-      <button id="toggleDeletionsButton">Hide/Show Deletions</button>
-      <button id="toggleNotesButton">Hide/Show Notes</button>
-      <button id="previousPageButton">previous page</button>
-      <button id="nextPageButton">next page</button>
+      <b>Hide deletions:</b>
+      <label class="switch">
+        <input type="checkbox" id="toggleDeletionsSwitch">
+        <span class="slider"></span>
+      </label>
+      <b>Hide notes:</b>
+      <label class="switch">
+        <input type="checkbox" id="toggleNotesSwitch">
+        <span class="slider"></span>
+      </label> 
+      <b>Read mode:</b>
+      <label class="switch">
+        <input type="checkbox" id="toggleReadMode">
+        <span class="slider"></span>
+      </label>
+      <button id="lastPageButton">>></button>
+      <button id="nextPageButton">></button>
+      <button id="previousPageButton">&lt;</button>
+      <button id="firstPageButton">&lt;&lt;</button>
       <div class="form-group">
         <select class="form-control" id="sel-hand" onChange="selectHand(event)">
           <option value="both">Both Hands</option>

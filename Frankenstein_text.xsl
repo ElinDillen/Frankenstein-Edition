@@ -114,6 +114,12 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='sub']">
+        <span class="infralinear">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
     <xsl:template match="tei:hi[@rend='u']">
         <span class="underline">
